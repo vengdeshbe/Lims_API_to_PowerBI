@@ -211,7 +211,7 @@ df_2026_till_oct_clean = df_2026_till_oct_clean.drop(
     columns=columns_to_remove,
     errors="ignore"
 )
-df_2026_till_oct_clean["Results_Entered_By"] = df_2026_till_oct_clean["Results_Entered_By"].astype("string").str.strip().replace(",", ":")
+df_2026_till_oct_clean["Results_Entered_By"] = df_2026_till_oct_clean["Results_Entered_By"].astype("string").str.strip().str.replace(",", ":")
 
 # ==========================================
 # CLEANING SUMMARY
