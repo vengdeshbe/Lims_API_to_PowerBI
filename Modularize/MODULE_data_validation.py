@@ -11,7 +11,7 @@ def validation(df,year):
 
     
     print("="*60)
-    print(f"\n{year} to till DATASET - INITIAL VALIDATION")
+    print(f"\n{year} to till date DATASET - INITIAL VALIDATION")
     print("="*60)
     print("Total records:", len(df_all_history))
     print("Minimum Registration Date:", df_all_history["Registration_date"].min())
@@ -56,7 +56,7 @@ def validation(df,year):
             "Reporting_Date"
         ]].sort_values("Sample_Number")
 
-    print("\n repeated sample records: ",
+    print("\n repeated sample records: \n",
         repeated_sample_records)
 
     print("\n Exact Duplicates record: ",
@@ -111,8 +111,7 @@ def validation(df,year):
 
     # 5. Remove unnecessary columns
     columns_to_remove = [
-        "Result_Received_Date",
-        "Details_received_on",
+        "Reported_by",
         "Result_Entered_Date"
     ]
 
